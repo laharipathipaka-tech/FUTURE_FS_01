@@ -1,0 +1,79 @@
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.strength-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem !important;
+  transition: all 0.3s ease;
+}
+
+.strength-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.strength-card:hover .strength-icon {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
+}
+
+.strength-card h4 {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+body.dark-mode .strength-card h4 {
+  color: var(--color-text-dark);
+}
+
+@media (max-width: 768px) {
+  .strengths-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .strength-card {
+    padding: 2rem 1rem !important;
+  }
+
+  .strength-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .strength-card h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .strengths-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .strength-card {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .strength-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
